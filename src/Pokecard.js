@@ -1,5 +1,6 @@
 // Show single pokemon car with name, imaage, type.
 import React, { Component } from "react";
+import "./Pokecard.css";
 
 const BASE_URL = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon";
 
@@ -10,7 +11,7 @@ class Pokecard extends Component {
 
         return (
             <div className="Pokecard">
-                { name } { type } { `${BASE_URL}/${id}.png` }
+                <p>{ name }</p> <img src={ `${BASE_URL}/${id}.png` }></img> <p>{ type }</p>
             </div>
         );
     }
