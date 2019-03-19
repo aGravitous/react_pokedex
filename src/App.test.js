@@ -1,9 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from "react";
+import { shallow, mount } from "enzyme";
+import App from "./App";
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+
+//Smoke test
+it("renders without crashing", function() {
+  shallow(<App />);
+});
+
+
+//mount smoke test
+it("renders using mount", function() {
+  mount(<App />);
 });
